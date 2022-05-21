@@ -10,22 +10,56 @@
 </head>
 <body>
     <header>
-        <h1>Magic Celinglish!</h1>
-        <img src="./Resources/Images/MickeyMouse.png" alt="Mickey Mouse from Magic English" id="mickey">
+        <div id="headerStartPage">
+            <h1 id="titleH1Start">Magic Celinglish!</h1>
+            <img src="./Resources/Images/MickeyMouse.png" alt="Mickey Mouse from Magic English" id="mickey">
+        </div>
+        <div id="headerGamePage">
+            <h3 id="userVariable"></h3>
+            <h1 id="titleH1Main">Magic Celinglish!</h1>
+            <div id="lifes">
+                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
+                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
+                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
+            </div>
+        </div>
+        <div id="headerFinalPage">
+
+        </div>
     </header>
     <main id="userContainer">
-        <form action="./game.html" method="POST">
-            <input type="text" name="user" id="user" placeholder="Introduce tu usuario">
-        </form>
-        <div class="button">
-            <a href="./game.html">
-                <button name="button" id="startButton" onClick=saveUser()>Empezar</button>
-            </a>
+        <div id="mainStartPage">
+            <form action="./game.html" method="POST">
+                <input type="text" name="user" id="user" placeholder="Introduce tu usuario">
+            </form>
+            <div class="button">
+                <button name="button" id="startButton" onClick="changeStartToGame()">Empezar</button>
+            </div>
+        </div>
+        <div id="mainGamePage">
+            <div id="container">
+                <div id="question"><h2 id="questionH2"></h2></div>
+                <form action="" method="POST">
+                    <input type="text" name="answer" id="answer" placeholder="Respuesta: ">
+                </form>
+                <button name="gameButton" id="gameButton" onClick="checkWord()">Responder</button>
+            </div>
+        </div>
+        <div id="mainFinalPage">
+
         </div>
     </main>
     <footer>
-        <p>Page made by Celia & Juanjo</p>
+        <div id="footerStartPage">
+            <p>Page made by Celia & Juanjo</p>
+        </div>
+        <div id="footerGamePage">
+            <p id="puntuacion">Puntuación: </p>
+        </div>
+        <div id="footerFinalPage">
+
+        </div>
     </footer>
-    <script src="./Resources/JS/index-JS.js" defer></script>
+    <script src="./Resources/JS/index-JS.js"></script>
 </body>
 </html>
