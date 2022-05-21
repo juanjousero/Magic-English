@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Resources/css/reset.css">
+    <link rel="stylesheet" href="./Resources/css/index-style.css">
+    <title>Magic Celinglish</title>
+</head>
+<body>
+    <header>
+        <h1>Magic Celinglish!</h1>
+        <img src="./Resources/Images/MickeyMouse.png" alt="Mickey Mouse from Magic English" id="mickey">
+    </header>
+    <main id="userContainer">
+        <form action="./game.html" method="POST">
+            <input type="text" name="user" id="user" placeholder="Introduce tu usuario">
+        </form>
+        <div class="button">
+            <a href="./game.html">
+                <button name="button" id="startButton" onClick=saveUser()>Empezar</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>Page made by Celia & Juanjo</p>
+    </footer>
+    <script src="./Resources/JS/index-JS.js" defer></script>
+</body>
+</html>
