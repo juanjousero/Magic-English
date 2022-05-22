@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Resources/css/reset.css">
     <link rel="stylesheet" href="./Resources/css/index-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Magic Celinglish</title>
 </head>
 <body>
@@ -18,13 +21,14 @@
             <h3 id="userVariable"></h3>
             <h1 id="titleH1Main">Magic Celinglish!</h1>
             <div id="lifes">
-                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
-                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
-                <div><img class="image" src="./Resources/Images/Corazon rojo.png" alt="Life icon red, simbolize one positive life"></div>
+                <div><img id ='thirdHeart' class="image" src="./Resources/Images/Corazon rojo.png" onerror="this.src='./Resources/Images/Corazon negro.png'"></div>
+                <div><img id ='secondHeart' class="image" src="./Resources/Images/Corazon rojo.png" onerror="this.src='./Resources/Images/Corazon negro.png'"></div>
+                <div><img id ='firstHeart' class="image" src="./Resources/Images/Corazon rojo.png" onerror="this.src='./Resources/Images/Corazon negro.png'"></div>
             </div>
         </div>
         <div id="headerFinalPage">
-
+            <h1 id="titleH1Start">Magic Celinglish!</h1>
+            <img src="./Resources/Images/MickeyMouse.png" alt="Mickey Mouse from Magic English" id="mickey">
         </div>
     </header>
     <main id="userContainer">
@@ -33,20 +37,22 @@
                 <input type="text" name="user" id="user" placeholder="Introduce tu usuario">
             </form>
             <div class="button">
-                <button name="button" id="startButton" onClick="changeStartToGame()">Empezar</button>
+                <button name="button" id="startButton" onClick="changeStartToGame();generateWord()">Empezar</button>
             </div>
         </div>
         <div id="mainGamePage">
             <div id="container">
                 <div id="question"><h2 id="questionH2"></h2></div>
                 <form action="" method="POST">
-                    <input type="text" name="answer" id="answer" placeholder="Respuesta: ">
+                    <input type="text" name="answer" id="answer" placeholder="Respuesta: " onClick="cleanAnswer()">
                 </form>
-                <button name="gameButton" id="gameButton" onClick="checkWord()">Responder</button>
+                <button name="gameButton" id="gameButton" onClick="response();generateWord();cleanAnswer()">Responder</button>
+                <p id="puntuacion">Puntuación: </p>
             </div>
         </div>
         <div id="mainFinalPage">
-
+            <h2 id="finalTitle">!</h2><br>
+            <h2 id="finalPunctuation"></h2>
         </div>
     </main>
     <footer>
@@ -54,10 +60,9 @@
             <p>Page made by Celia & Juanjo</p>
         </div>
         <div id="footerGamePage">
-            <p id="puntuacion">Puntuación: </p>
         </div>
         <div id="footerFinalPage">
-
+            <p>Page made by Celia & Juanjo</p>
         </div>
     </footer>
     <script src="./Resources/JS/index-JS.js"></script>
