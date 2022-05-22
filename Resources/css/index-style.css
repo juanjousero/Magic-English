@@ -27,6 +27,28 @@ h4 {
     font-weight: 350;
 }
 
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    h3 {
+        font-size: 26px;
+        font-weight: 400;
+    }
+    
+    h4 {
+        font-size: 22px;
+        font-weight: 350;
+    }
+}
+
 /* Página inicial */
 /* Header */
 
@@ -46,6 +68,17 @@ html, body {
 #mickey {
     height: 10rem;
     padding: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+    #headerStartPage {
+        height: 9rem;
+        padding-top: 1rem;
+    }
+    
+    #mickey {
+        height: 3rem;
+    }
 }
 
 /* Body */
@@ -96,6 +129,33 @@ html, body {
     color: white;
 }
 
+@media only screen and (max-width: 480px) {
+    #mainStartPage {
+        min-height: 100%;
+    }
+    
+    #user {
+        width: 70%;
+        height: 4rem;
+        font-size: 1.75rem;
+    }
+    
+    #startButton {
+        width: 10rem;
+        height: 3.5rem;
+        position: relative;
+        top: -1rem;
+        margin-bottom: 0rem;
+        border-radius: 0.75rem;
+        font-size: 1.75rem;
+    }
+    
+    #startButton:hover {
+        width: 11rem;
+        height: 2.75rem;
+    }
+}
+
 /* Footer */
 
 #footerStartPage {
@@ -109,6 +169,15 @@ html, body {
     height: 4rem;
     color: #380036;
 }
+
+@media only screen and (max-width: 480px) {
+    #footerStartPage {
+        position: relative;
+        top: 0rem;
+        height: 4rem;
+    }
+}
+
 /* ------------------------------------------------------- */ 
 /* Página de juego */
 /* Header */
@@ -150,10 +219,42 @@ html, body {
     padding-right: 0.75rem;
 }
 
+@media only screen and (max-width: 480px) {
+    
+    #headerGamePage {
+        height: 8rem;
+        display: flex;
+    }
+    
+    #titleH1Main {
+        font-size: 25px;
+        margin-left: 0rem;
+    }
+    
+    #userVarible {
+        display: none !important;
+        color: #380036;
+    }
+    
+    #lifes {
+        margin-left: 0rem;
+    }
+    
+    .image {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-right: 0.25rem;
+    }
+
+    #firstHeart {
+        margin-right: 2rem;
+    }
+
+}
+
 /* Body */
 #mainGamePage {
     width: 100%;
-    /*height: 950px;*/
     min-height: 115%;
     display: flex;
     flex-direction: row;
@@ -233,6 +334,41 @@ html, body {
     color: white;
 }
 
+@media only screen and (max-width: 480px) {
+    #mainGamePage {
+        min-height: 110%;
+    }
+    
+    #container {
+        width: 90%;
+    }
+    
+    #question {
+        height: 12rem;
+        border-radius: 2rem;
+        margin-bottom: 5rem;
+    }
+    
+    #questionH2 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    
+    #container form {
+        border-radius: 2rem;
+    }
+    
+    #answer {
+        height: 6rem;
+        font-size: 1.75rem;
+        font-weight: 200;
+    }
+    
+    #puntuacion {
+        margin-top: 18rem;
+    }
+}
+
 /* ------------------------------------------------------- */
 /* Página final */
 
@@ -244,6 +380,16 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #380036;
+}
+
+@media only screen and (max-width: 480px) {
+    #headerFinalPage {
+        height: 10rem;
+    }
+
+    #titleH1Start {
+        font-size: 2rem;
+    }
 }
 
 /* Main */
@@ -267,8 +413,30 @@ html, body {
 }
 
 #finalTitle, #finalPunctuation {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    #mainFinalPage {
+        max-height: 80%;
+        justify-content: flex-start;
+    }
+    
+    #mainFinalPage h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    #finalTitle {
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+    }
+    
+    #finalTitle, #finalPunctuation {
+        width: 80%;
+    }
 }
 
 
@@ -283,6 +451,12 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 4rem;
+}
+
+@media only screen and (max-width: 480px) {
+    #footerFinalPage {
+        height: 3rem;
+    }
 }
 
 /* ------------------------------------------------------- */
