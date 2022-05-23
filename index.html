@@ -34,10 +34,11 @@
     <main id="userContainer">
         <div id="mainStartPage">
             <form action="./game.html" method="POST">
-                <input type="text" name="user" id="user" placeholder="Introduce tu usuario">
+                <input type="text" name="user" id="user" placeholder="Introduce tu usuario" required>
             </form>
             <div class="button">
-                <button name="button" id="startButton" onClick="changeStartToGame();generateWord()">Empezar</button>
+                <button name="button" id="startButtonEnglish" onClick="changeStartToGame();generateEnglishWord()">Inglés a español</button>
+                <button name="button" id="startButtonSpanish" onClick="changeStartToGame();generateSpanishWord()">Español a inglés</button>
             </div>
         </div>
         <div id="mainGamePage">
@@ -46,8 +47,11 @@
                 <form action="" method="POST">
                     <input type="text" name="answer" id="answer" placeholder="Respuesta: " onClick="cleanAnswer()">
                 </form>
-                <button name="gameButton" id="gameButton" onClick="response();generateWord();cleanAnswer()">Responder</button>
+                <button name="gameButton" id="gameButton" onClick="response();generateEnglishWord();generateSpanishWord()">Responder</button>
+                <input type="image" name="hintButton" id="hintButton" onClick="generateHint()" src="./Resources/Images/Hint.png" alt="Símbolo de interrogación que aporta una pista" />
+                <p id="pista"></p>
                 <p id="puntuacion">Puntuación: </p>
+                <p id="respuestaCorrecta"></p>
             </div>
         </div>
         <div id="mainFinalPage">

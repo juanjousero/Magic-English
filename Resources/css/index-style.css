@@ -108,7 +108,7 @@ html, body {
     text-align: center;
 }
 
-#startButton {
+#startButtonEnglish, #startButtonSpanish {
     width: 20rem;
     height: 5rem;
     position: relative;
@@ -116,13 +116,13 @@ html, body {
     margin-bottom: -10rem;
     background-color: #0CBABA;
     border-radius: 0.75rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #380036;
     font-weight: 300;
     border: 2px solid #380036;
 }
 
-#startButton:hover {
+#startButtonEnglish:hover, #startButtonSpanish:hover {
     width: 21rem;
     height: 5.2rem;
     background-color: #380036;
@@ -140,17 +140,17 @@ html, body {
         font-size: 1.75rem;
     }
     
-    #startButton {
+    #startButtonEnglish, #startButtonSpanish {
         width: 10rem;
         height: 3.5rem;
         position: relative;
         top: -1rem;
         margin-bottom: 0rem;
         border-radius: 0.75rem;
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
     
-    #startButton:hover {
+    #startButtonEnglish:hover, #startButtonSpanish:hover {
         width: 11rem;
         height: 2.75rem;
     }
@@ -328,8 +328,37 @@ html, body {
     background-color: #380036;
 }
 
+#hintButton {
+    height: 4rem;
+    position: relative;
+    top: 3rem;
+    margin-top: 6rem;
+    margin-left: 18.75rem;
+}
+
+#hintButton:hover {
+    margin-top: 5.5rem;
+    height: 5rem;
+}
+
+#pista {
+    width: 40%;
+    position: relative;
+    padding-left: 3rem;
+    top: 9rem;
+    font-size: 1.25rem;
+    color: white;
+    font-style: italic;
+}
+
 #puntuacion {
-    margin-top: 17rem;
+    margin-top: 14rem;
+    font-size: 2rem;
+    color: white;
+}
+
+#respuestaCorrecta {
+    margin-top: 2rem;
     font-size: 2rem;
     color: white;
 }
@@ -366,6 +395,12 @@ html, body {
     
     #puntuacion {
         margin-top: 18rem;
+    }
+
+    #respuestaCorrecta {
+        margin-top: 3rem;
+        width: 80%;
+        font-size: 1.5rem;
     }
 }
 

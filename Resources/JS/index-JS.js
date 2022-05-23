@@ -19,7 +19,7 @@ const vocabulary = [
     {guapa : "cute"},
 	{alta: "tall"},  
 	{rubia: "blonde"},
-    {anotar: "note"},
+    {anotar: "to note"},
     {reducir: "lessen"},
     {imponer: "impose"},
     {pasillo: "corridor"},
@@ -34,6 +34,7 @@ let answer = '';
 let usuario = ''
 let j = 0;
 let i = 3;
+let type = '';
 const urlFallo = "/Images/Corazon negro.png";
 
 const gameButton = document.getElementById('gameButton');
@@ -74,23 +75,35 @@ function finalScreen () {
     }
 };
 
-// Función que genera una palabra aleatoriamente
-function generateWord () {
+// Función que genera una palabra aleatoriamente y la muestra en español para adivinarla en inglés
+function generateSpanishWord () {
     let index = Math.floor(Math.random()*vocabulary.length);
     word = Object.values(vocabulary[index]);
     wordSolution = Object.keys(vocabulary[index]);
+    type = 'spanish';
+    document.getElementById('questionH2').innerHTML = `Cómo se dice ${wordSolution} en inglés?`;
+    return [word, wordSolution, index, type];
+};
+
+// Función que genera una palabra aletoriamente y la muestra en inglés para adivinarla en español
+function generateEnglishWord () {
+    let index = Math.floor(Math.random()*vocabulary.length);
+    word = Object.values(vocabulary[index]);
+    wordSolution = Object.keys(vocabulary[index]);
+    type = 'english';
     document.getElementById('questionH2').innerHTML = `How do you say ${word} in Spanish?`;
-    return [word, wordSolution];
+    return [word, wordSolution, index, type];
 };
 
 // Función que comprueba si la palabra es correcta
-function checkWord(wor, ans) {
-    if (ans == wor) {
+function checkWord(worS, wor, ans) {
+    if (ans == worS || ans == wor) {
         j += 1;
         document.getElementById('puntuacion').innerHTML = `Puntuación: ${j}`;
         return j;
     } else {
         i -= 1;
+        document.getElementById('respuestaCorrecta').innerHTML = `PD: ${worS} es ${wor}, apunta anda, apunta`;
         if (i == 2) {
             firstHeart.src = urlFallo;
         } else if (i == 1) {
@@ -103,10 +116,31 @@ function checkWord(wor, ans) {
     };
 };
 
+// Función que genera una pista sobre la palabra que ha tocado
+function deleteHint(){
+    document.getElementById('pista').innerHTML = '';
+};
+
+function generateHint() {
+    let wordHint = String(word).toUpperCase();
+    let wordSolutionHint = String(wordSolution).toUpperCase();
+    if (type == 'spanish') {
+        document.getElementById('pista').innerHTML = `Pistilla: la letra por la que empieza la palabra es ${wordHint[0]}`;
+    } else {
+        document.getElementById('pista').innerHTML = `Pistilla: la letra por la que empieza la palabra es ${wordSolutionHint[0]}`;
+    }
+    setTimeout(deleteHint, 4000);
+};
+
 // Función que lee el valor de la respuesta
+function deleteAnswer() {
+    document.getElementById('answer').value = '';
+}
+
 function response () {
     answer = document.getElementById('answer').value.toLowerCase();
-    checkWord(wordSolution, answer);
+    checkWord(wordSolution, word, answer);
+    setTimeout(deleteAnswer, 100);
     return i;
 };
 
