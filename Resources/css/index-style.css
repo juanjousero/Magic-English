@@ -27,6 +27,13 @@ h4 {
     font-weight: 350;
 }
 
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 66px;
+        font-weight: 500;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     h1 {
         font-size: 40px;
@@ -68,6 +75,13 @@ html, body {
 #mickey {
     height: 10rem;
     padding: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+    #mickey {
+        height: 8rem;
+        padding: 1rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -219,6 +233,13 @@ html, body {
     padding-right: 0.75rem;
 }
 
+@media only screen and (max-width: 900px) {
+    #titleH1Main {
+        font-size: 35px;
+        margin-left: 6rem;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     
     #headerGamePage {
@@ -363,6 +384,13 @@ html, body {
     color: white;
 }
 
+@media only screen and (max-width: 900px) {
+    #questionH2 {
+        font-size: 2.25rem;
+        padding: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     #mainGamePage {
         min-height: 110%;
@@ -401,6 +429,11 @@ html, body {
         margin-top: 3rem;
         width: 80%;
         font-size: 1.5rem;
+    }
+
+    #pista {
+        width: 80%;
+        top: 7rem;
     }
 }
 

@@ -45,8 +45,9 @@
             <div id="container">
                 <div id="question"><h2 id="questionH2"></h2></div>
                 <form action="" method="POST">
-                    <input type="text" name="answer" id="answer" placeholder="Respuesta: " onClick="cleanAnswer()">
+                    <input type="text" name="answer" id="answer" placeholder="Respuesta: ">
                 </form>
+                <!--<img id="speaker" src="./Resources/Images/Speaker.png" alt="Icono de altavoz que una vez pulsado, lee una palabra">-->
                 <button name="gameButton" id="gameButton" onClick="response();generateEnglishWord();generateSpanishWord()">Responder</button>
                 <input type="image" name="hintButton" id="hintButton" onClick="generateHint()" src="./Resources/Images/Hint.png" alt="Símbolo de interrogación que aporta una pista" />
                 <p id="pista"></p>
